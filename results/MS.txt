@@ -1,0 +1,7 @@
+size: 5000000, g: 1000, threads: 11, timeS: 0.45983, timeP: 0.09695, SpeedUp: 4.74, Eff: 0.43, trueg: 1000
+size: 10000000, g: 1000, threads: 11, timeS: 0.95415, timeP: 0.21549, SpeedUp: 4.43, Eff: 0.40, trueg: 1000
+size: 15000000, g: 1000, threads: 11, timeS: 1.46522, timeP: 0.34869, SpeedUp: 4.20, Eff: 0.38, trueg: 1000
+size: 20000000, g: 1000, threads: 11, timeS: 2.00826, timeP: 0.48571, SpeedUp: 4.13, Eff: 0.38, trueg: 1000
+size: 25000000, g: 1000, threads: 11, timeS: 2.52300, timeP: 0.64237, SpeedUp: 3.93, Eff: 0.36, trueg: 1000
+size: 75000000, g: 1000, threads: 11, timeS: 8.40487, timeP: 2.15684, SpeedUp: 3.90, Eff: 0.35, trueg: 1000
+size: 100000000, g: 1000, threads: 11, timeS: 11.30614, timeP: 3.35456, SpeedUp: 3.37, Eff: 0.31, trueg: 1000
