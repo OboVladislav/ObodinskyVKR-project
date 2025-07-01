@@ -5,7 +5,7 @@ import (
 	"sync/atomic"
 )
 
-const minSize = 10000
+const minSize = 50000
 
 var (
 	pCounter  int64

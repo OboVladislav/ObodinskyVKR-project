@@ -1,8 +1,8 @@
 package additionalFunctions
 
-import (
-	"sync"
-)
+import "sync"
+
+var lenFiltered int64
 
 func More(a, b any) bool {
 	switch a.(type) {

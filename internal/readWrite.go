@@ -43,16 +43,16 @@ func SaveEfficiency(Efficiency [][]EfficiencyResult, file string, sizes, workers
 	defer f.Close()
 
 	for i := 0; i < len(sizes); i++ {
-		dataSize := sizes[i]
+		// dataSize := sizes[i]
 
-		index := 0
-		for j := 0; j < len(workersArr); j++ {
-			workers := workersArr[j]
+		// index := 0
+		for j := 0; j < len(workersArr)*12; j++ {
+			// workers := workersArr[j]
 
-			currentEfficiency := Efficiency[i][index]
+			currentEfficiency := Efficiency[i][j]
 
 			_, err = fmt.Fprintf(f, "size: %d, g: %d, threads: %d, timeS: %.5f, timeP: %.5f, SpeedUp: %.2f, Eff: %.2f, trueg: %d\n",
-				dataSize, workers, currentEfficiency.threads,
+				currentEfficiency.size, currentEfficiency.g, currentEfficiency.threads,
 				currentEfficiency.timeSeq, currentEfficiency.timePar,
 				currentEfficiency.speedUp, currentEfficiency.efficiency,
 				currentEfficiency.trueCountGoroutines,

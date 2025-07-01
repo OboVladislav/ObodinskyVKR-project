@@ -1,0 +1,89 @@
+
+filter
+
+{12: {'avg_eff': 0.48600000000000004,
+      'avg_speedup': 1.9489999999999998,
+      'avg_timeP': 0.22257699999999997,
+      'g': 12,
+      'threads': 4},
+ 500: {'avg_eff': 0.7860000000000001,
+       'avg_speedup': 2.358,
+       'avg_timeP': 0.18409199999999998,
+       'g': 500,
+       'threads': 3},
+ 1000: {'avg_eff': 0.502,
+        'avg_speedup': 2.011,
+        'avg_timeP': 0.21591300000000002,
+        'g': 1000,
+        'threads': 4}}
+
+Agg
+
+{12: {'avg_eff': 0.625,
+      'avg_speedup': 2.4909999999999997,
+      'avg_timeP': 0.021728,
+      'g': 12,
+      'threads': 4},
+ 500: {'avg_eff': 0.542,
+       'avg_speedup': 2.7100000000000004,
+       'avg_timeP': 0.019951000000000003,
+       'g': 500,
+       'threads': 5},
+ 1000: {'avg_eff': 0.45,
+        'avg_speedup': 2.7050000000000005,
+        'avg_timeP': 0.019896000000000004,
+        'g': 1000,
+        'threads': 6}}
+Gen
+
+{12: {'avg_eff': 0.569,
+      'avg_speedup': 6.818,
+      'avg_timeP': 0.162068,
+      'g': 12,
+      'threads': 12},
+ 500: {'avg_eff': 0.615,
+       'avg_speedup': 7.3740000000000006,
+       'avg_timeP': 0.14916999999999997,
+       'g': 500,
+       'threads': 12},
+ 1000: {'avg_eff': 0.615,
+        'avg_speedup': 7.388000000000001,
+        'avg_timeP': 0.14901,
+        'g': 1000,
+        'threads': 12}}
+
+QS
+
+{12: {'avg_eff': 0.28600000000000003,
+      'avg_speedup': 2.568,
+      'avg_timeP': 3.2025220000000005,
+      'g': 12,
+      'threads': 9},
+ 500: {'avg_eff': 0.462,
+       'avg_speedup': 5.098000000000001,
+       'avg_timeP': 1.5701260000000001,
+       'g': 500,
+       'threads': 11},
+ 1000: {'avg_eff': 0.542,
+        'avg_speedup': 5.418,
+        'avg_timeP': 1.4728700000000001,
+        'g': 1000,
+        'threads': 10}}
+
+QM
+
+{12: {'avg_eff': 0.22999999999999998,
+      'avg_speedup': 2.784,
+      'avg_timeP': 3.947,
+      'g': 12,
+      'threads': 12},
+ 500: {'avg_eff': 0.35,
+       'avg_speedup': 3.504,
+       'avg_timeP': 3.022602,
+       'g': 500,
+       'threads': 10},
+ 1000: {'avg_eff': 0.41200000000000003,
+        'avg_speedup': 3.716,
+        'avg_timeP': 2.8581899999999996,
+        'g': 1000,
+        'threads': 9}}

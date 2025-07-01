@@ -1,6 +1,0 @@
-5000000,goroutines:1,timeS:0.61170, timeP:0.14395 minSize 100000 sort.indt
-5000000,goroutines:1,timeS:0.61133, timeP:0.18245 minSize 10000 sort.indt
-5000000,goroutines:1,timeS:0.61545, timeP:0.23664 minSize 10000 sort.indt
-5000000,goroutines:1,timeS:0.64014, timeP:0.28388 minSize 100000 SequentialMergeSort
-5000000,goroutines:1,timeS:0.62308, timeP:0.29809 minSize 10000 SequentialMergeSort
-5000000,goroutines:1,timeS:0.63528, timeP:0.34791 minSize 1000 SequentialMergeSort
