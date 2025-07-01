@@ -64,8 +64,8 @@ func GetEfficiencyGenerate(sizes, workersArr []int) [][]EfficiencyResult {
 		dataSize := sizes[i]
 
 		startSeq := time.Now()
-		// SequentialGenerateDataset(dataSize)
-		ParallelGenerateDataset(dataSize, 1)
+		SequentialGenerateDataset(dataSize)
+		// ParallelGenerateDataset(dataSize, 1)
 		timeSeq := time.Since(startSeq)
 
 		EfficiencyPerWorker := []EfficiencyResult{}
@@ -109,7 +109,7 @@ func GetEfficiencyMergeSort(files []string, workersArr []int) [][]EfficiencyResu
 		copy(currentDataSeq, currentDataNotSorted)
 
 		startSeq := time.Now()
-		ParallelMergeSort(currentDataSeq, 1)
+		SequentialMergeSort(currentDataSeq)
 		timeSeq := time.Since(startSeq)
 
 		EfficiencyPerWorker := []EfficiencyResult{}
@@ -174,9 +174,9 @@ func GetEfficiencyQuickSort(files []string, workersArr []int) [][]EfficiencyResu
 		currentDataSeq := make([]int, len(currentDataNotSorted))
 		copy(currentDataSeq, currentDataNotSorted)
 
-		// startSeq := time.Now()
-		// SequentialQuicksort(currentDataSeq, 0, len(currentDataSeq)-1)
-		// timeSeq := time.Since(startSeq)
+		startSeq := time.Now()
+		SequentialQuicksort(currentDataSeq, 0, len(currentDataSeq)-1)
+		timeSeq := time.Since(startSeq)
 
 		EfficiencyPerWorker := []EfficiencyResult{}
 		for j := 0; j < len(workersArr); j++ {
@@ -195,9 +195,9 @@ func GetEfficiencyQuickSort(files []string, workersArr []int) [][]EfficiencyResu
 					ParallelQuicksort(currentDataPar, workers)
 					timePar := time.Since(startPar)
 
-					if k == 1 {
-						timeSeq = timePar
-					}
+					// if k == 1 {
+					// 	timeSeq = timePar
+					// }
 
 					speedUp := float64(timeSeq) / float64(timePar)
 					efficiency := speedUp / float64(k)
@@ -216,7 +216,7 @@ func GetEfficiencyQuickSort(files []string, workersArr []int) [][]EfficiencyResu
 
 func GetEfficiencyFilter(files []string, workersArr []int, compare_value int) [][]EfficiencyResult {
 	result := [][]EfficiencyResult{}
-	var timeSeq time.Duration
+	// var timeSeq time.Duration
 	for _, file := range files {
 		func() {
 			currentData := SequentialRead(file)
@@ -228,9 +228,9 @@ func GetEfficiencyFilter(files []string, workersArr []int, compare_value int) []
 				Count int
 			})
 			compare_value = int(metrics.Avg)
-			// startSeq := time.Now()
-			// SequentialFilter(currentData, compare_value)
-			// timeSeq := time.Since(startSeq)
+			startSeq := time.Now()
+			SequentialFilter(currentData, compare_value)
+			timeSeq := time.Since(startSeq)
 
 			efficiencyPerWorker := make([]EfficiencyResult, 0, len(workersArr)*runtime.NumCPU())
 			for _, workers := range workersArr {
@@ -243,9 +243,9 @@ func GetEfficiencyFilter(files []string, workersArr []int, compare_value int) []
 						ParallelFilter(currentData, workers, compare_value)
 						timePar := time.Since(startPar)
 
-						if k == 1 {
-							timeSeq = timePar
-						}
+						// if k == 1 {
+						// 	timeSeq = timePar
+						// }
 
 						speedUp := float64(timeSeq) / float64(timePar)
 						efficiency := speedUp / float64(k)
@@ -277,14 +277,14 @@ func GetEfficiencyAggregate(files []string, workersArr []int) [][]EfficiencyResu
 	for i := 0; i < len(files); i++ {
 		file := files[i]
 		currentData := SequentialRead(file)
-		startSeq := time.Now()
-
-		ParallelAggregation_MapReduce(&currentData, 1)
-		timeSeq := time.Since(startSeq)
-
 		// startSeq := time.Now()
-		// SequentialAggregate(currentData)
+
+		// ParallelAggregation_MapReduce(&currentData, 1)
 		// timeSeq := time.Since(startSeq)
+
+		startSeq := time.Now()
+		SequentialAggregate(currentData)
+		timeSeq := time.Since(startSeq)
 
 		EfficiencyPerWorker := []EfficiencyResult{}
 		for j := 0; j < len(workersArr); j++ {
